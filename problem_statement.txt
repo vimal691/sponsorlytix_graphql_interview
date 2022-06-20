@@ -1,0 +1,85 @@
+https://jazzy-handbell-35e.notion.site/GraphQL-assignment-afdec572a66446cbae75f98d7156ae5a
+
+# GraphQL assignment
+
+Create graphql api with [FastAPI](https://realpython.com/fastapi-python-web-apis/#create-a-first-api) framework using [graphene-python](https://docs.graphene-python.org/en/latest/quickstart/) library as a code-first approach.
+
+Seed data into database (can be any databases, or at least just create a mock data is fine) with the following data:
+
+Products separate by category
+
+- Fruit ⇒ category 1
+- Cloths ⇒ category 2
+- Snack ⇒ category 3
+
+| Id | Name         | Price | Category |
+| -- | ---          | ---   | ---      |
+| 1  | Apple        | 50    | 1        |
+| 2  | Banana       | 20    | 1        |
+| 3  | Orange       | 15    | 1        |
+| 4  | Shirt        | 120   | 2        |
+| 5  | Short        | 100   | 2        |
+| 6  | Sock         | 20    | 2        |
+| 7  | Chocolate    | 80    | 3        |
+| 8  | Chips        | 85    | 3        |
+| 9  | Pink Candy   | 60    | 3        |
+
+1. ProductDetails return single product. Eequire an Id of product to filter.
+    
+    ```json
+    {
+      "productDetails": {
+        "name": "Apple",
+        "price": 50,
+        "category": 1
+      }
+    }
+    ```
+    
+2. ProductOverview
+
+```json
+{
+  "productOverview": {
+    "products": [
+      {
+        "name": "Apple",
+        "price": 50,
+        "category": 1
+      },
+      {
+        "name": "Banana",
+        "price": 20,
+        "category": 1
+      }
+			.
+			.
+			.
+    ],
+    "totalProducts": 9,
+    "totalPrice": 550
+  }
+}
+```
+
+3. ProductsByCategory return the products of specific category. Require category Id to filter.
+
+```json
+{
+  "productsByCategory": [
+    {
+      "name": "Apple",
+      "price": 50,
+      "category": 1
+    },
+    {
+      "name": "Banana",
+      "price": 20,
+      "category": 1
+    }
+		.
+		.
+		.
+  ]
+}
+```
