@@ -1,6 +1,6 @@
 About Code and pre-requisite:
 
-    1. From folder graphql_fastapi_python problem run `pipenv shell`. 
+    1. From folder sponsorlytix_graphql_interview problem run `pipenv shell`. 
     This will create a virtual environment.
     2. Now run `pip install requirements.txt`. This will install all the
     dependencies for the project
